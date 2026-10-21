@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS PLAY — Centre de contrôle gaming intelligent</title>
+  <meta name="description" content="NEXUS PLAY est un copilote gaming : diagnostic PC, réglages Smart Play, découverte de jeux, mode créateur et assistant local. Téléchargez l’installeur Windows." />
+  <meta name="theme-color" content="#06070a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Filtre « liquide » appliqué aux blobs d'arrière-plan -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="liquid" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="2" seed="7" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="140" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
+  <div class="blobs" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- Viseur personnalisé (désactivé automatiquement sur écrans tactiles) -->
+  <div id="crosshair" aria-hidden="true">
+    <div class="ch-inner">
+      <span class="ch-line ch-top"></span>
+      <span class="ch-line ch-bottom"></span>
+      <span class="ch-line ch-left"></span>
+      <span class="ch-line ch-right"></span>
+      <span class="ch-dot"></span>
+      <span class="ch-circle"></span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav glass" id="nav">
+    <a href="#top" class="logo">NEXUS<span>PLAY</span></a>
+    <nav class="nav-links">
+      <a href="#apropos">À propos</a>
+      <a href="#modules">Modules</a>
+      <a href="#principes">Principes</a>
+      <a href="#telecharger">Télécharger</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-paypal btn-sm" href="https://www.paypal.com/paypalme/NatanBoncompain543" target="_blank" rel="noopener">PayPal</a>
+      <a class="btn btn-primary btn-sm" href="https://github.com/lyonzonziad-boop/nexus-play/releases/download/v1.0.0/NEXUS-PLAY-Setup.exe">Télécharger</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <span class="eyebrow reveal">CENTRE DE CONTRÔLE GAMING · v1.0.0</span>
+    <h1 class="reveal">NEXUS<br />PLAY</h1>
+    <p class="lead reveal">
+      Un copilote gaming qui diagnostique votre PC, prépare vos sessions, vous fait découvrir
+      de nouveaux titres et organise vos enregistrements, le tout depuis une interface unique,
+      sombre et épurée.
+    </p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary" href="https://github.com/lyonzonziad-boop/nexus-play/releases/download/v1.0.0/NEXUS-PLAY-Setup.exe" download>
+        Télécharger pour Windows
+      </a>
+      <a class="btn btn-paypal" href="https://www.paypal.com/paypalme/NatanBoncompain543" target="_blank" rel="noopener">
+        Soutenir sur PayPal
+      </a>
+    </div>
+    <p class="meta reveal">Windows 10 / 11 · 64 bits · Installeur .exe · ≈ 82 Mo</p>
+  </section>
+
+  <!-- Bandeau défilant -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-group">
+        <span>Game Doctor</span><span>Smart Play</span><span>Game DNA</span><span>Creator Mode</span>
+        <span>Mission AI</span><span>Game Hub</span><span>Tableau de bord</span>
+      </div>
+      <div class="ticker-group">
+        <span>Game Doctor</span><span>Smart Play</span><span>Game DNA</span><span>Creator Mode</span>
+        <span>Mission AI</span><span>Game Hub</span><span>Tableau de bord</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- À propos -->
+  <section class="section" id="apropos">
+    <div class="container about-grid">
+      <div class="reveal">
+        <span class="section-tag">01 — À propos</span>
+        <h2>Plus qu’un launcher.<br />Un centre de contrôle.</h2>
+      </div>
+      <div class="about-text reveal">
+        <p>
+          NEXUS PLAY est un copilote gaming pensé pour les joueurs qui veulent comprendre leur machine,
+          et pas seulement la faire tourner. Il réunit dans une même interface le diagnostic matériel,
+          l’analyse des journaux de crash, les réglages de performance, la découverte de jeux, la
+          préparation d’enregistrements et un assistant conversationnel.
+        </p>
+        <p>
+          Chaque recommandation est expliquée : ce qu’elle change, ses avantages, ses inconvénients.
+          NEXUS PLAY distingue toujours une action réellement effectuée d’une simple suggestion, et
+          n’invente jamais une cause ou une mesure. Quand une donnée est une démonstration, elle est
+          étiquetée comme telle.
+        </p>
+        <p>
+          Tout est stocké localement sur votre ordinateur. Aucun compte de jeu n’est demandé, aucun
+          mot de passe n’est saisi, et aucune action sensible ne se déclenche sans votre confirmation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modules -->
+  <section class="section" id="modules">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">02 — Modules</span>
+        <h2>Sept modules, une seule interface.</h2>
+      </div>
+      <div class="module-grid">
+        <article class="glass module reveal">
+          <span class="module-num">01</span>
+          <h3>Game Doctor</h3>
+          <p>Diagnostic matériel et analyse de journaux de crash grâce à des signatures d’erreurs connues : DirectX, VCRUNTIME, mémoire insuffisante, DLL manquantes, shaders et plus.</p>
+        </article>
+        <article class="glass module reveal">
+          <span class="module-num">02</span>
+          <h3>Smart Play</h3>
+          <p>Réglages recommandés selon votre objectif (fluidité, qualité, équilibre, anti-saccades), avec avantages et inconvénients, confirmation explicite et retour arrière.</p>
+        </article>
+        <article class="glass module reveal">
+          <span class="module-num">03</span>
+          <h3>Game DNA</h3>
+          <p>Découvrez des jeux à partir d’une simple description et de filtres : budget, plateforme, nombre de joueurs, genre, coopération, niveau matériel. Chaque suggestion est justifiée.</p>
+        </article>
+        <article class="glass module reveal">
+          <span class="module-num">04</span>
+          <h3>Creator Mode</h3>
+          <p>Préparez vos sessions d’enregistrement : checklist avant lancement, logiciels requis, raccourcis personnalisables, notes et indexation locale de vos clips.</p>
+        </article>
+        <article class="glass module reveal">
+          <span class="module-num">05</span>
+          <h3>Mission AI</h3>
+          <p>Un copilote conversationnel qui présente un plan d’étapes explicite : objectif, informations utilisées, permissions et résultat. Confirmation obligatoire avant toute action sensible.</p>
+        </article>
+        <article class="glass module reveal">
+          <span class="module-num">06</span>
+          <h3>Game Hub</h3>
+          <p>Votre bibliothèque de jeux : favoris, fiches détaillées, ajout depuis Game DNA et lien vers les profils Smart Play appliqués.</p>
+        </article>
+        <article class="glass module reveal">
+          <span class="module-num">07</span>
+          <h3>Tableau de bord</h3>
+          <p>Une vue d’ensemble qui rassemble toutes vos données, avec export et import JSON pour sauvegarder ou transférer votre configuration.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principes -->
+  <section class="section" id="principes">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">03 — Principes</span>
+        <h2>Local, transparent, maîtrisé.</h2>
+      </div>
+      <div class="principles">
+        <div class="glass principle reveal">
+          <h3>Données locales</h3>
+          <p>Tout reste sur votre machine. Aucun serveur ne reçoit vos diagnostics, votre historique ou votre bibliothèque. Aucun secret ni clé API n’est intégré à l’application.</p>
+        </div>
+        <div class="glass principle reveal">
+          <h3>Transparence</h3>
+          <p>Chaque valeur est étiquetée « Donnée réelle » ou « Démonstration ». Les limites sont documentées : un navigateur ou une application web ne peut pas tout mesurer, et NEXUS PLAY le dit.</p>
+        </div>
+        <div class="glass principle reveal">
+          <h3>Contrôle</h3>
+          <p>Aucune modification n’est appliquée sans votre accord explicite, et chaque réglage peut être annulé. Vous gardez la décision à chaque étape.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Téléchargement -->
+  <section class="section" id="telecharger">
+    <div class="container">
+      <div class="glass download reveal">
+        <div>
+          <span class="section-tag">04 — Téléchargement</span>
+          <h2>Installez NEXUS PLAY.</h2>
+          <p class="muted">
+            Un installeur Windows classique : choisissez le dossier d’installation, lancez l’application
+            depuis le menu Démarrer, c’est tout.
+          </p>
+          <div class="download-actions">
+            <a class="btn btn-primary" href="https://github.com/lyonzonziad-boop/nexus-play/releases/download/v1.0.0/NEXUS-PLAY-Setup.exe" download>
+              Télécharger NEXUS-PLAY-Setup.exe
+            </a>
+          </div>
+          <p class="fine">
+            Si Windows SmartScreen affiche un avertissement pour une application non reconnue, cliquez sur
+            « Informations complémentaires » puis sur « Exécuter quand même ».
+          </p>
+        </div>
+        <dl class="specs">
+          <div><dt>Fichier</dt><dd>NEXUS-PLAY-Setup.exe</dd></div>
+          <div><dt>Version</dt><dd>1.0.0</dd></div>
+          <div><dt>Taille</dt><dd>≈ 82 Mo</dd></div>
+          <div><dt>Système</dt><dd>Windows 10 / 11 · 64 bits</dd></div>
+          <div><dt>Installation</dt><dd>Classique, dossier au choix</dd></div>
+          <div><dt>Confidentialité</dt><dd>Données stockées localement</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soutien -->
+  <section class="section" id="soutien">
+    <div class="container">
+      <div class="glass support reveal">
+        <span class="section-tag">05 — Soutien</span>
+        <h2>Vous aimez NEXUS PLAY&nbsp;?</h2>
+        <p class="muted">
+          Le projet avance grâce aux retours et au soutien de sa communauté. Si NEXUS PLAY vous fait gagner du
+          temps, un don sur PayPal aide à continuer le développement. Merci.
+        </p>
+        <a class="btn btn-paypal btn-lg" href="https://www.paypal.com/paypalme/NatanBoncompain543" target="_blank" rel="noopener">
+          Faire un don sur PayPal
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo">NEXUS<span>PLAY</span></span>
+      <span class="muted fine">© 2026 NEXUS PLAY · Tous droits réservés</span>
+      <a class="footer-link" href="https://www.paypal.com/paypalme/NatanBoncompain543" target="_blank" rel="noopener">Soutenir sur PayPal</a>
+    </div>
+  </footer>
+
+  <!-- Boutons flottants -->
+  <button class="fab fab-left glass" id="chToggle" aria-expanded="false" aria-controls="chPanel">⌖ Viseur</button>
+  <a class="fab fab-right btn-paypal" href="https://www.paypal.com/paypalme/NatanBoncompain543" target="_blank" rel="noopener">♥ Soutenir</a>
+
+  <!-- Panneau de personnalisation du viseur -->
+  <aside class="ch-panel glass" id="chPanel" hidden>
+    <div class="panel-head">
+      <strong>Viseur personnalisé</strong>
+      <button class="icon-btn" id="chClose" aria-label="Fermer">✕</button>
+    </div>
+
+    <div class="presets">
+      <button class="btn btn-ghost btn-sm" data-preset="classic">Classique</button>
+      <button class="btn btn-ghost btn-sm" data-preset="dot">Point</button>
+      <button class="btn btn-ghost btn-sm" data-preset="circle">Cercle</button>
+      <button class="btn btn-ghost btn-sm" data-preset="tactical">Tactique</button>
+    </div>
+
+    <label class="row"><span>Couleur</span><input type="color" data-key="color" /></label>
+    <label class="row"><span>Taille</span><input type="range" min="2" max="40" data-key="size" /><output></output></label>
+    <label class="row"><span>Écart</span><input type="range" min="0" max="25" data-key="gap" /><output></output></label>
+    <label class="row"><span>Épaisseur</span><input type="range" min="1" max="6" data-key="thick" /><output></output></label>
+    <label class="row"><span>Point central</span><input type="range" min="0" max="10" data-key="dot" /><output></output></label>
+    <label class="row"><span>Rayon du cercle</span><input type="range" min="0" max="40" data-key="circle" /><output></output></label>
+    <label class="row"><span>Opacité</span><input type="range" min="20" max="100" data-key="opacity" /><output></output></label>
+
+    <div class="toggles">
+      <label><input type="checkbox" data-key="showLines" /> Lignes</label>
+      <label><input type="checkbox" data-key="showDot" /> Point</label>
+      <label><input type="checkbox" data-key="showCircle" /> Cercle</label>
+      <label><input type="checkbox" data-key="outline" /> Contour</label>
+      <label><input type="checkbox" data-key="glow" /> Lueur</label>
+    </div>
+
+    <button class="btn btn-ghost btn-sm full" id="chReset">Réinitialiser</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
